@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS Enterprises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #b51a00;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 30px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 80px;
+            margin-right: 15px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #b51a00;
+        }
+
+        /* 🔥 Fixed Full-Screen Image Slider */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-height: 600px;
+            overflow: hidden;
+        }
+        .slider {
+            display: flex;
+            width: 400%;
+            transition: transform 0.8s ease-in-out;
+        }
+        .slide {
+            flex: 0 0 100%;
+            max-height: 600px;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 🔥 Ensures full coverage without gaps */
+        }
+
+        /* 🔄 Navigation Buttons */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .prev { left: 20px; }
+        .next { right: 20px; }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* 🔵 Slider Dots */
+        .dots {
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .active { background-color: white; }
+
+        .welcome-section {
+            text-align: center;
+            padding: 40px;
+            color: #2C0977;
+        }
+        .welcome-section h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        .welcome-section p {
+            font-size: 18px;
+            color: #333;
+        }
+        footer {
+            background: #2C0977;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/RSE_LOGO_NEW.jpg" alt="RS Enterprises">
+            RS ENTERPRISES
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 🔥 Corrected Image Slider -->
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="images/HITCHO_resized.jpg" alt="Hitco"></div>
+            <div class="slide"><img src="images/bls_resized.jpg" alt="Blaser"></div>
+            <div class="slide"><img src="images/TUNG_resized.jpg" alt="Tungaloy"></div>
+            <div class="slide"><img src="images/WENdT_resized.jpg" alt="Wendt"></div>
+        </div>
+        <!-- Navigation Buttons -->
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        <!-- Dots -->
+        <div class="dots">
+            <span class="dot" onclick="setSlide(0)"></span>
+            <span class="dot" onclick="setSlide(1)"></span>
+            <span class="dot" onclick="setSlide(2)"></span>
+            <span class="dot" onclick="setSlide(3)"></span>
+        </div>
+    </div>
+
+    <section class="welcome-section">
+        <h2>Welcome to RS Enterprises</h2>
+        <p>RS Enterprises is a leading solution provider in the field of customised tooling for various applications like turning, rotating tools, and liquid tool solutions. 
+            Presently, RS Enterprises has partnerships with leading cutting tool manufacturing companies from Japan, Germany, Israel, USA, Switzerland, and India. 
+            In our quest to find the optimum solution for our customers, we continually seek out technologically advanced products to meet our customer needs.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 RS Enterprises. All Rights Reserved.</p>
+        <p>Contact: info@rsenterprises.com | Tel: 040-48544579</p>
+    </footer>
+
+    <!-- 🔄 Corrected JavaScript for Slider -->
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".dot");
+        const totalSlides = slides.length;
+        let slideInterval;
+
+        function moveSlide(step) {
+            slideIndex += step;
+            if (slideIndex >= totalSlides) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = totalSlides - 1;
+            updateSlide();
+            restartAutoSlide(); // Restart timer after manual navigation
+        }
+
+        function setSlide(index) {
+            slideIndex = index;
+            updateSlide();
+            restartAutoSlide();
+        }
+
+        function updateSlide() {
+            document.querySelector(".slider").style.transform = `translateX(${-slideIndex * 100}%)`;
+            dots.forEach(dot => dot.classList.remove("active"));
+            dots[slideIndex].classList.add("active");
+        }
+
+        function autoSlide() {
+            slideIndex = (slideIndex + 1) % totalSlides;
+            updateSlide();
+            slideInterval = setTimeout(autoSlide, 5000); // 5 seconds per slide
+        }
+
+        function restartAutoSlide() {
+            clearTimeout(slideInterval);
+            slideInterval = setTimeout(autoSlide, 5000);
+        }
+
+        dots[slideIndex].classList.add("active"); // Initialize active dot
+        slideInterval = setTimeout(autoSlide, 5000); // Start auto-slide
+    </script>
+</body>
+</html>
