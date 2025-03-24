@@ -6,12 +6,15 @@
     <title>Our Services - RS Enterprises</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        /* Reset styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Montserrat', sans-serif;
         }
+
+        /* Body */
         body {
             background-color: #f4f4f4;
             color: #333;
@@ -19,6 +22,8 @@
             flex-direction: column;
             min-height: 100vh;
         }
+
+        /* Header */
         header {
             background: #b51a00;
             color: white;
@@ -26,33 +31,99 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            height: 100px;
+            position: relative;
         }
+
+        /* Logo */
         .logo {
-            font-size: 30px;
-            font-weight: 800;
+            font-size: 26px;
+            font-weight: bold;
             display: flex;
             align-items: center;
         }
+
         .logo img {
-            height: 80px;
+            height: 60px;
             margin-right: 15px;
         }
+
+        /* Navigation */
+        nav {
+            display: flex;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
         }
+
         nav ul li {
             margin: 0 15px;
         }
+
         nav ul li a {
             text-decoration: none;
             color: white;
             font-size: 16px;
             transition: 0.3s;
         }
+
         nav ul li a:hover {
             color: #b51a00;
         }
+
+        /* Mobile Menu Button */
+        .menu-toggle {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: row;
+                align-items: center;
+                height: auto;
+                padding: 15px;
+            }
+
+            .logo img {
+                height: 50px;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 100px;
+                left: 0;
+                width: 100%;
+                background: #b51a00;
+                flex-direction: column;
+                text-align: center;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-active {
+                display: flex;
+            }
+        }
+
+        /* Main Content */
         .container {
             max-width: 1000px;
             margin: 50px auto;
@@ -61,19 +132,24 @@
             text-align: center;
             flex: 1;
         }
+
         h1, h2 {
             color: #2C0977;
             margin-bottom: 10px;
         }
+
         .services-list {
             text-align: left;
             display: inline-block;
             margin-top: 20px;
         }
+
         .services-list li {
             font-size: 18px;
             margin-bottom: 10px;
         }
+
+        /* Footer */
         footer {
             background: #2C0977;
             color: white;
@@ -86,10 +162,11 @@
 <body>
     <header>
         <div class="logo">
-            <img src="C:\Users\uthej\OneDrive\Desktop\RSE\images\RSE LOGO NEW .jpg" alt="RS Enterprises">
-            RS ENTERPRISES
+            <img src="images\RSE LOGO NEW .jpg" alt="RS Enterprises">
+            <span>RS ENTERPRISES</span>
         </div>
-        <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav id="nav-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -114,5 +191,11 @@
         <p>&copy; 2025 RS Enterprises. All Rights Reserved.</p>
         <p>Contact: info@rsenterprises.com | Tel: 040-48544579</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("nav-active");
+        }
+    </script>
 </body>
 </html>

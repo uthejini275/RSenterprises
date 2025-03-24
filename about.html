@@ -25,14 +25,14 @@
             justify-content: space-between;
         }
         .logo {
-            font-size: 30px;
+            font-size: 24px;
             font-weight: 800;
             display: flex;
             align-items: center;
         }
         .logo img {
-            height: 80px;
-            margin-right: 15px;
+            height: 60px;
+            margin-right: 10px;
         }
         nav ul {
             list-style: none;
@@ -50,11 +50,31 @@
         nav ul li a:hover {
             color: #b51a00;
         }
+
+        /* 📱 Mobile Navigation */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .logo img {
+                height: 50px;
+            }
+            nav ul {
+                flex-direction: column;
+                padding-top: 10px;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+
         .container {
             max-width: 1000px;
             margin: 50px auto;
             padding: 20px;
             line-height: 1.8;
+            text-align: justify;
         }
         h1, h2, h3 {
             color: #2C0977;
@@ -68,6 +88,14 @@
         .container a:hover {
             text-decoration: underline;
         }
+
+        /* 📱 Mobile-friendly container */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+        }
+
         footer {
             background: #2C0977;
             color: white;
@@ -80,8 +108,9 @@
 <body>
     <header>
         <div class="logo">
-            <img src="C:\Users\uthej\OneDrive\Desktop\RSE\images\RSE LOGO NEW .jpg" alt="RS Enterprises">
-            RS ENTERPRISES</div>
+            <img src="images\RSE LOGO NEW .jpg" alt="RS Enterprises">
+            RS ENTERPRISES
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -96,18 +125,18 @@
     <div class="container">
         <h1>About Us</h1>
         <h2>Who We Are?</h2>
-        <p>RS Enterprises is one of the leading solution provider in the filed of manufacturing industry located at  <strong>Jeedimetla, Hyderabad</strong>, specializing in <strong>cutting tools, grinding solutions, and deburring solutions</strong>. With years of expertise, we provide <strong>customized tooling proposals and services</strong> for esteemed customers engaged in <strong>new projects, tooling applications, and cycle time optimization (CPC).</strong></p>
+        <p>RS Enterprises is a leading solution provider in the manufacturing industry, located in <strong>Jeedimetla, Hyderabad</strong>. We specialize in <strong>cutting tools, grinding solutions, and deburring solutions</strong>. Our expertise includes providing <strong>customized tooling proposals and services</strong> for new projects, tooling applications, and cycle time optimization (CPC).</p>
         
         <h2>Our Expertise</h2>
-        <p>Our core strength lies in delivering <strong>tailored solutions</strong> that enhance productivity, efficiency, and precision in machining.</p>
+        <p>We focus on delivering <strong>tailored solutions</strong> that enhance productivity, efficiency, and precision in machining.</p>
         
         <h2>Our Authorized Channel Partnerships</h2>
         
         <h3><a href="https://www.tungaloy.co.jp/in" target="_blank">🔹 Tungaloy</a></h3>
-        <p>A leading manufacturer of <strong>indexable and carbide tooling</strong> for <strong>turning, milling, drilling, threading, and grooving</strong>. Part of the prestigious <strong>IMC Group</strong>.</p>
+        <p>A leading manufacturer of <strong>indexable and carbide tooling</strong> for turning, milling, drilling, threading, and grooving.</p>
         
         <h3><a href="https://www.blaser.com" target="_blank">🔹 Blaser Swisslube</a></h3>
-        <p>Blaser provides <strong>high-performance liquid tool solutions</strong> with benefits like:</p>
+        <p>High-performance liquid tool solutions with benefits like:</p>
         <ul>
             <li>✔ <strong>20–25% higher tool performance</strong></li>
             <li>✔ <strong>Enhanced productivity</strong></li>
@@ -116,18 +145,18 @@
         </ul>
         
         <h3><a href="https://www.hittco.com" target="_blank">🔹 Hittco</a></h3>
-        <p>Manufacturers of <strong>high-performance carbide & HSS tools</strong> designed for machining a <strong>wide variety of metals</strong>.</p>
+        <p>Manufacturers of <strong>high-performance carbide & HSS tools</strong> for machining a wide variety of metals.</p>
         
         <h3><a href="https://www.cumi.murugappa.com" target="_blank">🔹 CUMI</a></h3>
-        <p>Producers of <strong>standard and customized abrasive products</strong>, catering to diverse customer requirements.</p>
+        <p>Producers of <strong>customized abrasive products</strong> for diverse industries.</p>
         
         <h3><a href="https://www.wendtindia.com" target="_blank">🔹 Wendt India</a></h3>
-        <p>Specialists in <strong>Diamond & CBN precision grinding tools</strong>, used for <strong>hard materials</strong> like steel, ceramics, carbide, and exotic materials.</p>
+        <p>Experts in <strong>Diamond & CBN precision grinding tools</strong> for steel, ceramics, carbide, and exotic materials.</p>
         
         <h2>Partner with Us</h2>
-        <p>We invite you to register <strong>RS Enterprises</strong> as your <strong>trusted vendor</strong> for the entire range of <strong>cutting tools, grinding solutions, and abrasives</strong>. Our team is dedicated to providing <strong>best-in-class support, timely service, and expert recommendations</strong> to help you achieve operational excellence.</p>
+        <p><strong>RS Enterprises</strong> as your trusted vendor for <strong>cutting tools, grinding solutions, and abrasives</strong>. Our team ensures best-in-class support, timely service, and expert recommendations.</p>
         
-        <p>📩 <strong>For business inquiries</strong>, reach out to us anytime. We look forward to a successful partnership!</p>
+        <p>📩 <strong>For business inquiries</strong>, contact us anytime.</p>
     </div>
     
     <footer>

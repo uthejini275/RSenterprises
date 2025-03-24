@@ -19,6 +19,7 @@
             flex-direction: column;
             min-height: 100vh;
         }
+        /* Header */
         header {
             background: #b51a00;
             color: white;
@@ -26,16 +27,22 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            height: 100px;
+            position: relative;
         }
         .logo {
-            font-size: 30px;
-            font-weight: 800;
+            font-size: 26px;
+            font-weight: bold;
             display: flex;
             align-items: center;
         }
         .logo img {
-            height: 80px;
+            height: 60px;
             margin-right: 15px;
+        }
+        /* Navigation */
+        nav {
+            display: flex;
         }
         nav ul {
             list-style: none;
@@ -52,6 +59,48 @@
         }
         nav ul li a:hover {
             color: #b51a00;
+        }
+        /* Mobile Menu Button */
+        .menu-toggle {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: row;
+                align-items: center;
+                height: auto;
+                padding: 15px;
+            }
+            .logo img {
+                height: 50px;
+            }
+            nav {
+                display: none;
+                position: absolute;
+                top: 100px;
+                left: 0;
+                width: 100%;
+                background: #b51a00;
+                flex-direction: column;
+                text-align: center;
+                padding: 15px 0;
+            }
+            nav ul {
+                flex-direction: column;
+                padding: 0;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .nav-active {
+                display: flex;
+            }
         }
         .container {
             flex: 1;
@@ -82,7 +131,7 @@
             background: white;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: left; /* Aligns text to the left */
+            text-align: left;
             font-size: 16px;
             line-height: 1.6;
         }
@@ -106,10 +155,11 @@
 
     <header>
         <div class="logo">
-            <img src="C:\Users\uthej\OneDrive\Desktop\RSE\images\RSE LOGO NEW .jpg" alt="RS Enterprises">
-            RS ENTERPRISES</div>
+            <img src="images\RSE LOGO NEW .jpg" alt="RS Enterprises">
+            <span>RS ENTERPRISES</span>
         </div>
-        <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav id="nav-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -123,7 +173,6 @@
     <div class="container">
         <h1>Contact Us</h1>
         <div class="contact-section">
-            <!-- Left: Google Maps -->
             <div class="map-container">
                 <iframe 
                  width="100%" 
@@ -136,16 +185,14 @@
                 </iframe>
             </div>
 
-            <!-- Right: Contact Details -->
             <div class="contact-details">
                 <h2>Get in Touch</h2>
                 <p><strong>Phone:</strong> +91-9963333802</p>
                 <p><strong>Tel:</strong> 040-48544579</p>
                 <p><strong>Email:</strong> info@rsenterprises.com</p>
-                <p><strong>Address:</n>
-
-                </strong> Prashanth Enclave, Jeedimetla Village,<br>
-                 Quthbullapur, Hyderabad - 500067</p>
+                <p><strong>Address:</strong><br>
+                Prashanth Enclave, Jeedimetla Village,<br>
+                Quthbullapur, Hyderabad - 500067</p>
             </div>
         </div>
     </div>
@@ -154,6 +201,12 @@
         <p>&copy; 2025 RS Enterprises. All Rights Reserved.</p>
         <p>Contact: info@rsenterprises.com | Tel: 040-48544579</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("nav-active");
+        }
+    </script>
 
 </body>
 </html>

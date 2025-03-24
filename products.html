@@ -28,14 +28,14 @@
             justify-content: space-between;
         }
         .logo {
-            font-size: 30px;
+            font-size: 24px;
             font-weight: 800;
             display: flex;
             align-items: center;
         }
         .logo img {
-            height: 80px;
-            margin-right: 15px;
+            height: 60px;
+            margin-right: 10px;
         }
         nav ul {
             list-style: none;
@@ -51,19 +51,19 @@
             transition: 0.3s;
         }
         nav ul li a:hover {
-            color: #b51a00;
+            color: #ffcccb;
         }
         .container {
             max-width: 1000px;
-            margin: 50px auto;
+            margin: 40px auto; /* Matched spacing */
             padding: 20px;
-            line-height: 1.8;
             text-align: center;
             flex: 1;
         }
         h1 {
             color: #2C0977;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 28px;
         }
         .grid {
             display: flex;
@@ -75,8 +75,8 @@
         .grid a {
             display: flex;
             align-items: center;
-            gap: 10px; /* Space between logo and text */
-            padding: 12px 15px;
+            gap: 12px; /* Uniform spacing */
+            padding: 15px;
             background: white;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -89,25 +89,42 @@
             transform: scale(1.05);
         }
         .grid img {
-            height: 60px; /* Increased size */
+            height: 60px;
             width: auto;
         }
         footer {
-    background: #2C0977; /* Dark purple */
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: auto;
-    font-size: 14px;
-}
+            background: #2C0977;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+            font-size: 14px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                margin-top: 10px;
+                justify-content: center;
+            }
+            .grid {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="C:\Users\uthej\OneDrive\Desktop\RSE\images\RSE LOGO NEW .jpg" alt="RS Enterprises">
-            RS ENTERPRISES
+            <img src="images\RSE LOGO NEW .jpg" alt="RS Enterprises">
+            <span>RS ENTERPRISES</span>
         </div>
+        
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -124,23 +141,23 @@
         
         <div class="grid">
             <a href="https://www.tungaloy.co.jp/in" target="_blank">
-                <img src="C:\Users\uthej\OneDrive\Desktop\RSE\images\T.LOGO.jpg" alt="Tungaloy">
+                <img src="images/T.LOGO.jpg" alt="Tungaloy">
                 Tungaloy
             </a>
             <a href="https://www.blaser.com" target="_blank">
-                <img src="C:\Users\uthej\OneDrive\Desktop\RSE\images\B.LOGO.jpg" alt="Blaser Swisslube">
+                <img src="images/B.LOGO.jpg" alt="Blaser Swisslube">
                 Blaser Swisslube
             </a>
             <a href="https://www.hittco.com" target="_blank">
-                <img src="C:\Users\uthej\OneDrive\Desktop\RSE\images\H.LOGO.jpg" alt="Hittco">
+                <img src="images/H.LOGO.jpg" alt="Hittco">
                 Hittco
             </a>
             <a href="https://www.cumi.murugappa.com" target="_blank">
-                <img src="C:\Users\uthej\OneDrive\Desktop\RSE\images\Logo-cumi.JPG" alt="CUMI Abrasives">
+                <img src="images/Logo-cumi.JPG" alt="CUMI Abrasives">
                 CUMI Abrasives
             </a>
             <a href="https://www.wendtindia.com" target="_blank">
-                <img src="C:\Users\uthej\OneDrive\Desktop\RSE\images\W.LOGO.jpg" alt="Wendt India">
+                <img src="images/W.LOGO.jpg" alt="Wendt India">
                 Wendt India
             </a>
         </div>
