@@ -1,3 +1,6 @@
+function toggleMenu() {
+    document.getElementById("nav-menu").classList.toggle("show");
+}
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav-menu");
