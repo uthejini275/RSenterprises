@@ -23,6 +23,7 @@
             align-items: center;
             justify-content: space-between;
             position: relative;
+            z-index: 1000;
         }
         .logo {
             font-size: 20px;
@@ -33,6 +34,10 @@
         .logo img {
             height: 50px;
             margin-right: 10px;
+        }
+        nav {
+            position: relative;
+            z-index: 1001;
         }
         nav ul {
             list-style: none;
@@ -55,24 +60,40 @@
             font-size: 28px;
             cursor: pointer;
         }
+
+        /* Mobile Navigation Fix */
         @media (max-width: 768px) {
+            nav {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #b51a00;
+                z-index: 1002; /* Ensures it's above the slider */
+            }
             nav ul {
                 display: none;
                 flex-direction: column;
-                background: #b51a00;
-                position: absolute;
-                top: 100%;
-                left: 0;
                 width: 100%;
                 text-align: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #b51a00;
+                padding: 10px 0;
             }
             nav ul.show {
                 display: flex;
             }
+            nav ul li {
+                padding: 10px;
+            }
             .menu-icon {
                 display: block;
+                z-index: 1003;
             }
         }
+
         .slider-container {
             width: 100%;
             height: 300px;
@@ -102,6 +123,7 @@
             padding: 10px;
             font-size: 20px;
             cursor: pointer;
+            z-index: 1002;
         }
         .prev { left: 10px; }
         .next { right: 10px; }
@@ -111,6 +133,7 @@
             bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
+            z-index: 1002;
         }
         .dot {
             height: 10px;
