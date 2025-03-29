@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,9 +24,10 @@
             align-items: center;
             justify-content: space-between;
             position: relative;
+            z-index: 1000; /* Ensures header is on top */
         }
         .logo {
-           px;
+            font-size: 24px;
             font-weight: 800;
             display: flex;
             align-items: center;
@@ -38,6 +40,7 @@
         nav ul {
             list-style: none;
             display: flex;
+            z-index: 1000; /* Ensures menu is on top */
         }
         nav ul li {
             margin: 0 15px;
@@ -67,6 +70,7 @@
                 left: 0;
                 width: 100%;
                 text-align: center;
+                z-index: 1000; /* Ensures menu is on top */
             }
             nav ul.show {
                 display: flex;
@@ -115,7 +119,7 @@
             padding: 15px;
             font-size: 24px;
             cursor: pointer;
-            z-index: 1000;
+            z-index: 1000; /* Ensures buttons are on top */
         }
         .prev { left: 10px; }
         .next { right: 10px; }
@@ -129,6 +133,7 @@
             bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
+            z-index: 1000; /* Ensures dots are on top */
         }
         .dot {
             height: 10px;
@@ -202,8 +207,7 @@
         </div>
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
-        <div class="dots">
-            <span class="dot" onclick="setSlide(0)"></span>
+       (0)"></span>
             <span class="dot" onclick="setSlide(1)"></span>
             <span class="dot" onclick="setSlide(2)"></span>
             <span class="dot" onclick="setSlide(3)"></span>
