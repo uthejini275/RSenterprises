@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +27,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: relative;
+            z-index: 1000; /* Ensures header is on top */
         }
         .logo {
             font-size: 24px;
@@ -40,6 +43,7 @@
         nav ul {
             list-style: none;
             display: flex;
+            z-index: 1000; /* Ensures menu is on top */
         }
         nav ul li {
             margin: 0 15px;
@@ -52,6 +56,34 @@
         }
         nav ul li a:hover {
             color: #ffcccb;
+        }
+        /* 📱 Mobile Navigation */
+        .menu-icon {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background: #b51a00;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                z-index: 1000; /* Ensures menu is on top */
+            }
+            nav ul.show {
+                display: flex;
+            }
+            nav ul li {
+                padding: 10px;
+            }
+            .menu-icon {
+                display: block;
+            }
         }
         .container {
             max-width: 1000px;
@@ -121,12 +153,12 @@
 <body>
     <header>
         <div class="logo">
-            <img src="images\RSE LOGO NEW .jpg" alt="RS Enterprises">
+            <img src="images/RSE LOGO NEW.jpg" alt="RS Enterprises">
             <span>RS ENTERPRISES</span>
         </div>
-        
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="products.html">Products</a></li>
@@ -165,7 +197,12 @@
     
     <footer>
         <p>&copy; 2025 RS Enterprises. All Rights Reserved.</p>
-        <p>Contact: inforsebuisness@gmail.com | Tel : 040-48544579</p>
+        <p>Contact: info@rsenterprises.com | Tel: 040-48544579</p>
     </footer>
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
