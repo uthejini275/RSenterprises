@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Products - RS Enterprises</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
@@ -16,9 +16,6 @@
     body {
       background-color: #f4f4f4;
       color: #333;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
 
     header {
@@ -66,7 +63,6 @@
       border-radius: 4px;
     }
 
-    /* Hamburger styles */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -100,16 +96,15 @@
 
       nav ul li {
         margin: 10px 0;
-        text-align: center;
       }
     }
 
     .container {
       max-width: 1000px;
-      margin: 40px auto;
+      margin: 50px auto;
       padding: 20px;
+      line-height: 1.8;
       text-align: center;
-      flex: 1;
     }
 
     h1 {
@@ -154,8 +149,7 @@
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: auto;
-      font-size: 14px;
+      margin-top: 50px;
     }
   </style>
 </head>
@@ -165,13 +159,11 @@
       <img src="images/RSE LOGO NEW .jpg" alt="RS Enterprises" />
       RS ENTERPRISES
     </div>
-
     <div class="hamburger" onclick="toggleMenu()">
       <div></div>
       <div></div>
       <div></div>
     </div>
-
     <nav>
       <ul id="menu">
         <li><a href="index.html">Home</a></li>
@@ -185,6 +177,7 @@
 
   <div class="container">
     <h1>Our Products</h1>
+
     <div class="grid">
       <a href="https://www.tungaloy.co.jp/in" target="_blank">
         <img src="images/T.LOGO.jpg" alt="Tungaloy" />
@@ -211,7 +204,7 @@
 
   <footer>
     <p>&copy; 2025 RS Enterprises. All Rights Reserved.</p>
-    <p>Contact: info@rsenterprises.com | Tel : 040-48544579</p>
+    <p>Contact: info@rsenterprises.com | Tel: 040-48544579</p>
   </footer>
 
   <script>
