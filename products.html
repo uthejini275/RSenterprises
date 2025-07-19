@@ -1,171 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products - RS Enterprises</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
-        }
-        body {
-            background-color: #f4f4f4;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            background: #b51a00;
-            color: white;
-            padding: 15px 30px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            display: flex;
-            align-items: center;
-        }
-        .logo img {
-            height: 60px;
-            margin-right: 10px;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-        nav ul li a:hover {
-            color: #ffcccb;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 40px auto; /* Matched spacing */
-            padding: 20px;
-            text-align: center;
-            flex: 1;
-        }
-        h1 {
-            color: #2C0977;
-            margin-bottom: 20px;
-            font-size: 28px;
-        }
-        .grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .grid a {
-            display: flex;
-            align-items: center;
-            gap: 12px; /* Uniform spacing */
-            padding: 15px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-            text-decoration: none;
-            color: #2C0977;
-            font-weight: 600;
-        }
-        .grid a:hover {
-            transform: scale(1.05);
-        }
-        .grid img {
-            height: 60px;
-            width: auto;
-        }
-        footer {
-            background: #2C0977;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: auto;
-            font-size: 14px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Products - RS Enterprises</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
 
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-            }
-            nav ul {
-                margin-top: 10px;
-                justify-content: center;
-            }
-            .grid {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #b51a00;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #b51a00;
+      background: white;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Hamburger styles */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      transition: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #b51a00;
+        margin-top: 15px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+        text-align: center;
+      }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: center;
+      flex: 1;
+    }
+
+    h1 {
+      color: #2C0977;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .grid a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 15px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      text-decoration: none;
+      color: #2C0977;
+      font-weight: 600;
+    }
+
+    .grid a:hover {
+      transform: scale(1.05);
+    }
+
+    .grid img {
+      height: 60px;
+      width: auto;
+    }
+
+    footer {
+      background: #2C0977;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: auto;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images\RSE LOGO NEW .jpg" alt="RS Enterprises">
-            <span>RS ENTERPRISES</span>
-        </div>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <div class="container">
-        <h1>Our Products</h1>
-        
-        <div class="grid">
-            <a href="https://www.tungaloy.co.jp/in" target="_blank">
-                <img src="images/T.LOGO.jpg" alt="Tungaloy">
-                Tungaloy
-            </a>
-            <a href="https://www.blaser.com" target="_blank">
-                <img src="images/B.LOGO.jpg" alt="Blaser Swisslube">
-                Blaser Swisslube
-            </a>
-            <a href="https://www.hittco.com" target="_blank">
-                <img src="images/H.LOGO.jpg" alt="Hittco">
-                Hittco
-            </a>
-            <a href="https://www.cumi-murugappa.com/" target="_blank">
-                <img src="images/Logo-cumi.JPG" alt="CUMI Abrasives">
-                CUMI Abrasives
-            </a>
-            <a href="https://www.wendtindia.com" target="_blank">
-                <img src="images/W.LOGO.jpg" alt="Wendt India">
-                Wendt India
-            </a>
-        </div>
+  <header>
+    <div class="logo">
+      <img src="images/RSE LOGO NEW .jpg" alt="RS Enterprises" />
+      RS ENTERPRISES
     </div>
-    
-    <footer>
-        <p>&copy; 2025 RS Enterprises. All Rights Reserved.</p>
-        <p>Contact: info@rsenterprises.com | Tel : 040-48544579</p>
-    </footer>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Our Products</h1>
+    <div class="grid">
+      <a href="https://www.tungaloy.co.jp/in" target="_blank">
+        <img src="images/T.LOGO.jpg" alt="Tungaloy" />
+        Tungaloy
+      </a>
+      <a href="https://www.blaser.com" target="_blank">
+        <img src="images/B.LOGO.jpg" alt="Blaser Swisslube" />
+        Blaser Swisslube
+      </a>
+      <a href="https://www.hittco.com" target="_blank">
+        <img src="images/H.LOGO.jpg" alt="Hittco" />
+        Hittco
+      </a>
+      <a href="https://www.cumi-murugappa.com/" target="_blank">
+        <img src="images/Logo-cumi.JPG" alt="CUMI Abrasives" />
+        CUMI Abrasives
+      </a>
+      <a href="https://www.wendtindia.com" target="_blank">
+        <img src="images/W.LOGO.jpg" alt="Wendt India" />
+        Wendt India
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 RS Enterprises. All Rights Reserved.</p>
+    <p>Contact: info@rsenterprises.com | Tel : 040-48544579</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
