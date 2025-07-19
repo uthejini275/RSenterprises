@@ -12,6 +12,7 @@
       box-sizing: border-box;
       font-family: 'Montserrat', sans-serif;
     }
+
     body {
       background-color: #f4f4f4;
       color: #333;
@@ -19,6 +20,7 @@
       flex-direction: column;
       min-height: 100vh;
     }
+
     header {
       background: #b51a00;
       color: white;
@@ -26,44 +28,68 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
     }
+
     .logo {
       font-size: 30px;
       font-weight: 800;
       display: flex;
       align-items: center;
     }
+
     .logo img {
       height: 80px;
       margin-right: 15px;
     }
-    .menu-toggle {
+
+    .menu-icon {
       display: none;
       font-size: 28px;
       cursor: pointer;
     }
+
     nav {
-      flex-basis: 100%;
-      display: flex;
-      justify-content: flex-end;
+      background-color: #b51a00;
     }
+
     nav ul {
       list-style: none;
       display: flex;
-      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px 0;
     }
+
     nav ul li {
       margin: 0 15px;
     }
+
     nav ul li a {
       text-decoration: none;
       color: white;
       font-size: 16px;
       transition: 0.3s;
     }
+
     nav ul li a:hover {
       color: #ffcccb;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 10px;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
     }
 
     .container {
@@ -74,19 +100,23 @@
       text-align: center;
       flex: 1;
     }
+
     h1, h2 {
       color: #2C0977;
       margin-bottom: 10px;
     }
+
     .services-list {
       text-align: left;
       display: inline-block;
       margin-top: 20px;
     }
+
     .services-list li {
       font-size: 18px;
       margin-bottom: 10px;
     }
+
     .service-image {
       margin-top: 30px;
       max-width: 100%;
@@ -94,6 +124,7 @@
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
+
     footer {
       background: #2C0977;
       color: white;
@@ -101,50 +132,28 @@
       padding: 20px;
       margin-top: auto;
     }
-
-    /* Responsive styles */
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-      nav {
-        display: none;
-        width: 100%;
-        margin-top: 10px;
-      }
-      nav.active {
-        display: flex;
-        justify-content: center;
-      }
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-      }
-      nav ul li {
-        margin: 10px 0;
-      }
-    }
   </style>
 </head>
 <body>
 
+  <!-- Header same as index.html -->
   <header>
     <div class="logo">
       <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/RSE%20LOGO%20NEW%20.jpg?raw=true" alt="RS Enterprises">
       RS ENTERPRISES
     </div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <nav id="navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
   </header>
+
+  <nav>
+    <ul id="menuList">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
   <div class="container">
     <h1>Our Services</h1>
@@ -155,7 +164,6 @@
       <li>✅ Customer support</li>
     </ul>
 
-    <!-- Service image section -->
     <img class="service-image" src="https://github.com/uthejini275/RSenterprises/blob/main/images/blaser_blog_Der-Refraktometer-im-Einsatz.jpg?raw=true" alt="RS Enterprises Services">
   </div>
 
@@ -166,9 +174,10 @@
 
   <script>
     function toggleMenu() {
-      const nav = document.getElementById('navbar');
-      nav.classList.toggle('active');
+      const menu = document.getElementById('menuList');
+      menu.classList.toggle('active');
     }
   </script>
+
 </body>
 </html>
