@@ -15,7 +15,6 @@
 
     body {
       background-color: #f4f4f4;
-      color: #333;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -28,35 +27,25 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      position: relative;
+      z-index: 1001;
     }
 
     .logo {
-      font-size: 30px;
+      font-size: 24px;
       font-weight: 800;
       display: flex;
       align-items: center;
     }
 
     .logo img {
-      height: 80px;
-      margin-right: 15px;
-    }
-
-    .menu-icon {
-      display: none;
-      font-size: 28px;
-      cursor: pointer;
-    }
-
-    nav {
-      background-color: #b51a00;
+      height: 60px;
+      margin-right: 10px;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      justify-content: center;
-      padding: 10px 0;
     }
 
     nav ul li {
@@ -67,28 +56,38 @@
       text-decoration: none;
       color: white;
       font-size: 16px;
-      transition: 0.3s;
     }
 
-    nav ul li a:hover {
-      color: #ffcccb;
+    .menu-icon {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      z-index: 1002;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
-      .menu-icon {
-        display: block;
-      }
-
       nav ul {
         display: none;
         flex-direction: column;
-        align-items: center;
-        padding-bottom: 10px;
+        background: #b51a00;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1000;
       }
 
-      nav ul.active {
+      nav ul.show {
         display: flex;
+      }
+
+      nav ul li {
+        padding: 10px 0;
+      }
+
+      .menu-icon {
+        display: block;
       }
     }
 
@@ -96,9 +95,9 @@
       max-width: 1000px;
       margin: 50px auto;
       padding: 20px;
-      line-height: 1.8;
-      text-align: center;
       flex: 1;
+      text-align: center;
+      color: #333;
     }
 
     h1, h2 {
@@ -117,12 +116,16 @@
       margin-bottom: 10px;
     }
 
-    .service-image {
+    .services-image {
       margin-top: 30px;
-      max-width: 100%;
-      height: auto;
+      text-align: center;
+    }
+
+    .services-image img {
+      width: 100%;
+      max-width: 800px;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     footer {
@@ -130,30 +133,28 @@
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: auto;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header same as index.html -->
   <header>
     <div class="logo">
-      <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/RSE%20LOGO%20NEW%20.jpg?raw=true" alt="RS Enterprises">
+      <img src="images/RSE LOGO NEW .jpg" alt="RS Enterprises" />
       RS ENTERPRISES
     </div>
     <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-
-  <nav>
-    <ul id="menuList">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
 
   <div class="container">
     <h1>Our Services</h1>
@@ -164,7 +165,9 @@
       <li>✅ Customer support</li>
     </ul>
 
-    <img class="service-image" src="https://github.com/uthejini275/RSenterprises/blob/main/images/blaser_blog_Der-Refraktometer-im-Einsatz.jpg?raw=true" alt="RS Enterprises Services">
+    <div class="services-image">
+      <img src="images/7a3efb1b-c67b-446e-ac8e-298d687d25c8.png" alt="Service Image">
+    </div>
   </div>
 
   <footer>
@@ -174,8 +177,7 @@
 
   <script>
     function toggleMenu() {
-      const menu = document.getElementById('menuList');
-      menu.classList.toggle('active');
+      document.getElementById("nav-menu").classList.toggle("show");
     }
   </script>
 
