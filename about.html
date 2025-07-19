@@ -12,10 +12,12 @@
             box-sizing: border-box;
             font-family: 'Montserrat', sans-serif;
         }
+
         body {
             background-color: #f4f4f4;
             color: #333;
         }
+
         header {
             background: #b51a00;
             color: white;
@@ -23,47 +25,76 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
+
         .logo {
             font-size: 24px;
             font-weight: 800;
             display: flex;
             align-items: center;
         }
+
         .logo img {
             height: 60px;
             margin-right: 10px;
         }
+
         nav ul {
             list-style: none;
             display: flex;
         }
+
         nav ul li {
             margin: 0 15px;
         }
+
         nav ul li a {
             text-decoration: none;
             color: white;
             font-size: 16px;
             transition: 0.3s;
         }
+
         nav ul li a:hover {
             color: #b51a00;
+            background: white;
+            padding: 2px 6px;
+            border-radius: 4px;
         }
 
-        /* 📱 Mobile Navigation */
+        /* Hamburger styles */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            transition: 0.3s;
+        }
+
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
+            .hamburger {
+                display: flex;
             }
-            .logo img {
-                height: 50px;
-            }
+
             nav ul {
+                display: none;
                 flex-direction: column;
-                padding-top: 10px;
+                width: 100%;
+                background-color: #b51a00;
+                margin-top: 15px;
             }
+
+            nav ul.show {
+                display: flex;
+            }
+
             nav ul li {
                 margin: 10px 0;
             }
@@ -76,20 +107,22 @@
             line-height: 1.8;
             text-align: justify;
         }
+
         h1, h2, h3 {
             color: #2C0977;
             margin-bottom: 10px;
         }
+
         .container a {
             color: #2C0977;
             text-decoration: none;
             font-weight: bold;
         }
+
         .container a:hover {
             text-decoration: underline;
         }
 
-        /* 📱 Mobile-friendly container */
         @media (max-width: 600px) {
             .container {
                 padding: 15px;
@@ -106,13 +139,19 @@
     </style>
 </head>
 <body>
+
     <header>
         <div class="logo">
-            <img src="images\RSE LOGO NEW .jpg" alt="RS Enterprises">
+            <img src="images/RSE LOGO NEW .jpg" alt="RS Enterprises">
             RS ENTERPRISES
         </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <nav>
-            <ul>
+            <ul id="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="products.html">Products</a></li>
@@ -163,5 +202,12 @@
         <p>&copy; 2025 RS Enterprises. All Rights Reserved.</p>
         <p>Contact: info@rsenterprises.com | Tel: 040-48544579</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
