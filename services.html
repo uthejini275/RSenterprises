@@ -1,185 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Services - RS Enterprises</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    body {
-      background-color: #f4f4f4;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      background: #b51a00;
-      color: white;
-      padding: 15px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-      z-index: 1001;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 60px;
-      margin-right: 10px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-    }
-
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-size: 16px;
-    }
-
-    .menu-icon {
-      display: none;
-      font-size: 28px;
-      cursor: pointer;
-      z-index: 1002;
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-        flex-direction: column;
-        background: #b51a00;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        z-index: 1000;
-      }
-
-      nav ul.show {
-        display: flex;
-      }
-
-      nav ul li {
-        padding: 10px 0;
-      }
-
-      .menu-icon {
-        display: block;
-      }
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 20px;
-      flex: 1;
-      text-align: center;
-      color: #333;
-    }
-
-    h1, h2 {
-      color: #2C0977;
-      margin-bottom: 10px;
-    }
-
-    .services-list {
-      text-align: left;
-      display: inline-block;
-      margin-top: 20px;
-    }
-
-    .services-list li {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .services-image {
-      margin-top: 30px;
-      text-align: center;
-    }
-
-    .services-image img {
-      width: 100%;
-      max-width: 800px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    footer {
-      background: #2C0977;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 50px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Tooling Proposals & Cycle-Time Optimisation – RS Enterprises</title>
+  <meta name="description" content="Customised tooling proposals, new-project tooling, application support, cycle-time optimisation, coolant management, grinding and deburring solutions from RS Enterprises, Hyderabad.">
+  <meta name="theme-color" content="#f26a21">
+  <link rel="icon" href="images/rse-logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
 </head>
-<body>
+<body data-page="services">
 
-  <header>
-    <div class="logo">
-      <img src="images/RSE LOGO NEW .jpg" alt="RS Enterprises" />
-      RS ENTERPRISES
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="crumbs"><a href="index.html">Home</a> / Services</div>
+      <span class="eyebrow">Our services</span>
+      <h1>Engineering support that <span class="text-grad">cuts cost per component</span></h1>
+      <p>We go beyond supplying tools — we help you choose, prove and optimise them on your own machines.</p>
     </div>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <nav>
-      <ul id="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  </section>
 
-  <div class="container">
-    <h1>Our Services</h1>
-    <h2>What We Offer</h2>
-    <ul class="services-list">
-      <li>✅ High-quality product development</li>
-      <li>✅ Business consulting</li>
-      <li>✅ Customer support</li>
-    </ul>
-
-    <div class="services-image">
-      <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/blaser_blog_Der-Refraktometer-im-Einsatz.jpg?raw=true" alt="Service Image">
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
+          <h3>Customised Tooling Proposals</h3>
+          <p>Send your drawing — we propose the complete tooling solution, including special tools where standard ones fall short.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></div>
+          <h3>New Project Tooling</h3>
+          <p>Tooling layouts and selection for new components and production lines, ready for trial and PPAP.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3>Cycle-Time Optimisation</h3>
+          <p>We trial better grades, geometries and parameters on your machines to reduce cycle time and cost per component (CPC).</p>
+        </div>
+        <div class="card reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></div>
+          <h3>Application Support</h3>
+          <p>On-site help with tool setting, troubleshooting tool life, chip control and surface finish problems.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7S5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2.7 12 2.7z"/></svg></div>
+          <h3>Coolant Management</h3>
+          <p>Blaser Swisslube fluid selection, concentration monitoring and sump care for longer tool and fluid life.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>Grinding &amp; Deburring</h3>
+          <p>Diamond, CBN and abrasive solutions from Wendt and CUMI for precision grinding and clean deburring.</p>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 RS Enterprises. All Rights Reserved.</p>
-    <p>Contact: inforsebuisness@gmail.com | Tel: 040-48544579</p>
-  </footer>
+  <section class="section tint">
+    <div class="container split">
+      <div class="reveal">
+        <span class="eyebrow">Coolant expertise</span>
+        <h2>The liquid tool matters as much as the cutting tool</h2>
+        <p class="lead">With Blaser Swisslube fluids, customers see 20–25% higher tool performance — plus cleaner machines and a safer workplace.</p>
+        <ul class="check-list">
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Enhanced productivity</b>Higher cutting data and longer tool life.</div></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Machine &amp; material safety</b>Protects spindles, slideways and components.</div></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Human safety compliance</b>Skin-friendly, low-odour formulations.</div></li>
+        </ul>
+      </div>
+      <div class="split-img reveal">
+        <img src="images/blaser-refractometer.jpg" alt="Checking coolant concentration with a refractometer" loading="lazy">
+      </div>
+    </div>
+  </section>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("nav-menu").classList.toggle("show");
-    }
-  </script>
+  <section class="section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">How we work</span>
+        <h2>From drawing to production in four steps</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><h3>Understand</h3><p>We study your component, material, machine and current process.</p></div>
+        <div class="step reveal"><h3>Propose</h3><p>A tooling proposal with standard and customised tools and expected savings.</p></div>
+        <div class="step reveal"><h3>Trial</h3><p>On-machine trials to prove tool life, cycle time and quality.</p></div>
+        <div class="step reveal"><h3>Support</h3><p>Ongoing supply, regrinding advice and continuous improvement.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-band reveal">
+        <div>
+          <h2>Let's optimise your next job</h2>
+          <p>Book a visit from our application team.</p>
+        </div>
+        <div class="cta-actions"><a class="btn btn-white" href="contact.html#enquiry">Book a visit</a></div>
+      </div>
+    </div>
+  </section>
+</main>
 
 </body>
 </html>

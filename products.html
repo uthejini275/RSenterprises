@@ -1,246 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Products - RS Enterprises</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    body {
-      background-color: #f4f4f4;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      background: #b51a00;
-      color: white;
-      padding: 15px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-      z-index: 1001;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 60px;
-      margin-right: 10px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-    }
-
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-size: 16px;
-      transition: 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #ffcccb;
-    }
-
-    .menu-icon {
-      display: none;
-      font-size: 28px;
-      cursor: pointer;
-      z-index: 1002;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 20px;
-      text-align: center;
-      flex: 1;
-    }
-
-    h1 {
-      color: #2C0977;
-      margin-bottom: 30px;
-      font-size: 30px;
-    }
-
-    .grid {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: center;
-      gap: 25px;
-      overflow-x: auto;
-      padding-bottom: 10px;
-    }
-
-    .grid::-webkit-scrollbar {
-      height: 6px;
-    }
-
-    .grid::-webkit-scrollbar-thumb {
-      background-color: #bbb;
-      border-radius: 3px;
-    }
-
-    .grid a {
-      flex: 0 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      padding: 20px;
-      width: 160px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease;
-      text-decoration: none;
-      color: #2C0977;
-      font-weight: 600;
-      text-align: center;
-    }
-
-    .grid a:hover {
-      transform: translateY(-5px);
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .grid img {
-      max-width: 100px;
-      max-height: 60px;
-      object-fit: contain;
-    }
-
-    footer {
-      background: #2C0977;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      margin-top: auto;
-    }
-
-    /* --- Mobile Styles --- */
-    @media (max-width: 768px) {
-  
-
-      nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #b51a00;
-        width: 100%;
-        padding: 10px 0;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1000;
-      }
-
-      nav ul.show {
-        display: flex;
-      }
-
-      nav ul li {
-        padding: 10px 0;
-        margin: 0;
-      }
-
-      .menu-icon {
-        display: block;
-      }
-
-      .grid {
-        flex-wrap: wrap;
-        justify-content: center;
-        overflow-x: unset;
-      }
-
-      .grid a {
-        width: 80%;
-        margin-bottom: 20px;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | Tungaloy, Blaser, Hittco, CUMI, Wendt, Sigma – RS Enterprises</title>
+  <meta name="description" content="Cutting tools, metalworking fluids, abrasives and grinding wheels from Tungaloy, Blaser Swisslube, Hittco, CUMI, Wendt India and Sigma Toolings, plus RS Customised special tools.">
+  <meta name="theme-color" content="#f26a21">
+  <link rel="icon" href="images/rse-logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
 </head>
-<body>
+<body data-page="products">
 
-  <header>
-    <div class="logo">
-      <img src="images/RSE LOGO NEW .jpg" alt="RS Enterprises">
-      <span>RS ENTERPRISES</span>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="crumbs"><a href="index.html">Home</a> / Products</div>
+      <span class="eyebrow">Our products</span>
+      <h1>World-class brands, <span class="text-grad">one partner</span></h1>
+      <p>We are authorised channel partners for leading tooling manufacturers — and we source customised special tools for your components.</p>
     </div>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <nav>
-      <ul id="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  </section>
 
-  <div class="container">
-    <h1>Our Products</h1>
-    <div class="grid">
-      <a href="rscustomised.html">
-        <img src="images/RSE LOGO NEW .jpg" alt="RS Customised">
-        RS Customised
-      </a>
-      <a href="https://www.tungaloy.co.jp/in" target="_blank">
-        <img src="images/T.LOGO.jpg" alt="Tungaloy">
-        Tungaloy
-      </a>
-      <a href="https://www.blaser.com" target="_blank">
-        <img src="images/B.LOGO.jpg" alt="Blaser Swisslube">
-        Blaser Swisslube
-      </a>
-      <a href="https://www.hittco.com" target="_blank">
-        <img src="images/H.LOGO.jpg" alt="Hittco">
-        Hittco
-      </a>
-      <a href="https://www.cumi-murugappa.com/" target="_blank">
-        <img src="images/Logo-cumi.JPG" alt="CUMI Abrasives">
-        CUMI Abrasives
-      </a>
-      <a href="https://www.wendtindia.com" target="_blank">
-        <img src="images/W.LOGO.jpg" alt="Wendt India">
-        Wendt India
-      </a>
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-4">
+
+        <a class="card brand-card featured reveal" href="rscustomised.html">
+          <div class="logo-box"><img src="images/rse-logo.jpg" alt="RS Customised" loading="lazy"></div>
+          <div class="body">
+            <span class="tag">Special tools</span>
+            <h3>RS Customised</h3>
+            <p>Special form drills, PCD tools, step drills, grooving and face-groove tools — sourced to your component drawing from our manufacturing partners.</p>
+            <span class="more">View custom tools <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+
+        <a class="card brand-card reveal" href="https://www.tungaloy.co.jp/in" target="_blank" rel="noopener">
+          <div class="logo-box"><img src="images/logo-tungaloy.jpg" alt="Tungaloy" loading="lazy"></div>
+          <div class="body">
+            <span class="tag">Cutting tools · Japan</span>
+            <h3>Tungaloy</h3>
+            <p>Indexable and carbide tooling for turning, milling, drilling, threading and grooving.</p>
+            <span class="more">Visit Tungaloy <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+          </div>
+        </a>
+
+        <a class="card brand-card reveal" href="https://www.blaser.com" target="_blank" rel="noopener">
+          <div class="logo-box"><img src="images/logo-blaser.jpg" alt="Blaser Swisslube" loading="lazy"></div>
+          <div class="body">
+            <span class="tag">Metalworking fluids · Switzerland</span>
+            <h3>Blaser Swisslube</h3>
+            <p>Liquid tool solutions delivering 20–25% higher tool performance with machine, material and human safety.</p>
+            <span class="more">Visit Blaser <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+          </div>
+        </a>
+
+        <a class="card brand-card reveal" href="https://www.hittco.com" target="_blank" rel="noopener">
+          <div class="logo-box"><img src="images/logo-hittco.jpg" alt="Hittco" loading="lazy"></div>
+          <div class="body">
+            <span class="tag">Carbide &amp; HSS tools</span>
+            <h3>Hittco</h3>
+            <p>High-performance carbide and HSS tools for machining a wide variety of metals.</p>
+            <span class="more">Visit Hittco <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+          </div>
+        </a>
+
+        <a class="card brand-card reveal" href="https://www.cumi-murugappa.com/" target="_blank" rel="noopener">
+          <div class="logo-box"><img src="images/logo-cumi.jpg" alt="CUMI" loading="lazy"></div>
+          <div class="body">
+            <span class="tag">Abrasives · India</span>
+            <h3>CUMI Abrasives</h3>
+            <p>Customised abrasive products for diverse industries.</p>
+            <span class="more">Visit CUMI <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+          </div>
+        </a>
+
+        <a class="card brand-card reveal" href="https://www.wendtindia.com" target="_blank" rel="noopener">
+          <div class="logo-box"><img src="images/logo-wendt.jpg" alt="Wendt India" loading="lazy"></div>
+          <div class="body">
+            <span class="tag">Diamond &amp; CBN grinding</span>
+            <h3>Wendt India</h3>
+            <p>Precision grinding tools for steel, ceramics, carbide and exotic materials.</p>
+            <span class="more">Visit Wendt <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+          </div>
+        </a>
+
+        <a class="card brand-card reveal" href="https://sigmatoolings.com/" target="_blank" rel="noopener">
+          <div class="logo-box"><img src="images/sigma-toolings-logo.png" alt="Sigma Toolings" loading="lazy"></div>
+          <div class="body">
+            <span class="tag">Boring &amp; special tooling · India</span>
+            <h3>Sigma Toolings</h3>
+            <p>Samurai anti-vibration boring tools, micro bore units and complete tooling solutions that lower cost per component.</p>
+            <span class="more">Visit Sigma <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+          </div>
+        </a>
+
+      </div>
     </div>
-  </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 RS Enterprises. All Rights Reserved.</p>
-    <p>Contact: inforsebuisness@gmail.com | Tel : 040-48544579</p>
-  </footer>
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-band reveal">
+        <div>
+          <h2>Not sure which tool fits?</h2>
+          <p>Share your component, material and machine — we'll recommend the right product.</p>
+        </div>
+        <div class="cta-actions"><a class="btn btn-white" href="contact.html#enquiry">Get a recommendation</a></div>
+      </div>
+    </div>
+  </section>
+</main>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("nav-menu").classList.toggle("show");
-    }
-  </script>
 </body>
 </html>

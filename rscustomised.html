@@ -1,270 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RS Customised Products</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    body {
-      background-color: #f4f4f4;
-    }
-
-    header {
-      background: #b51a00;
-      color: white;
-      padding: 15px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-      z-index: 1001;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 60px;
-      margin-right: 10px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-    }
-
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-size: 16px;
-    }
-
-    .menu-icon {
-      display: none;
-      font-size: 28px;
-      cursor: pointer;
-      z-index: 1002;
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-        flex-direction: column;
-        background: #b51a00;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        align-items: center;
-        z-index: 1000;
-        justify-content: center;
-        height: 100vh;
-      }
-      nav ul.show {
-        display: flex;
-      }
-      nav ul li {
-        padding: 10px 0;
-        justify-content: center;
-height: 100vh;
-      }
-      .menu-icon {
-        display: block;
-      }
-    }
-
-    h1 {
-      text-align: center;
-      margin: 40px auto 30px;
-      color: #2C0977;
-      font-size: 30px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto 50px;
-      padding: 0 20px;
-    }
-
-    .image-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .image-card {
-      text-align: center;
-      max-width: 300px;
-    }
-
-    .image-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: contain;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-      padding: 10px;
-    }
-
-    .image-card img:hover {
-      transform: scale(1.05);
-    }
-
-    .image-card p {
-      margin-top: 10px;
-      font-size: 14px;
-      color: #333;
-      font-weight: 500;
-    }
-
-   footer {
-      background: #2C0977;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 50px;
-    }
-
-    @media (max-width: 768px) {
-      .image-card {
-        max-width: 100%;
-      }
-
-      .image-card img {
-        height: auto;
-      }
-
-      h1 {
-        font-size: 24px;
-        margin: 30px 0;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RS Customised Tools | Form Drills, PCD & Step Drills – RS Enterprises</title>
+  <meta name="description" content="Customised special tools by RS Enterprises: form drills, PCD form drills, step drills, grooving and face-groove tools supplied to your component drawing.">
+  <meta name="theme-color" content="#f26a21">
+  <link rel="icon" href="images/rse-logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
 </head>
-<body>
+<body data-page="products">
 
-  <header>
-    <div class="logo">
-      <img src="images/RSE LOGO NEW .jpg" alt="RS Enterprises" />
-      RS ENTERPRISES
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="crumbs"><a href="index.html">Home</a> / <a href="products.html">Products</a> / RS Customised</div>
+      <span class="eyebrow">RS Customised</span>
+      <h1>Special tools, <span class="text-grad">sourced to your drawing</span></h1>
+      <p>We source form drills, PCD tools, step drills and grooving tools made to your drawing by trusted manufacturing partners — for single-pass machining of complex features.</p>
     </div>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <nav>
-      <ul id="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  </section>
 
-  <div class="container">
-    <h1>RS Customised Products</h1>
+  <section class="section">
+    <div class="container">
+      <div class="filters reveal">
+        <button class="chip active" data-filter="all">All tools</button>
+        <button class="chip" data-filter="pcd">PCD Form Drills</button>
+        <button class="chip" data-filter="form">Form Drills</button>
+        <button class="chip" data-filter="step">Step Drills</button>
+        <button class="chip" data-filter="special">Grooving &amp; Special</button>
+      </div>
 
-    <div class="image-grid">
-      <div class="image-card">
-        <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/WhatsApp%20Image%202025-07-25%20at%2015.56.57_3a20482f.jpg?raw=true" alt="30×1W ID Groove Tool">
-        <p>SPL Groove Turn</p>
-      </div>
-      <div class="image-card">
-        <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/WhatsApp%20Image%202025-07-25%20at%2015.57.22_6d307bf3.jpg?raw=true" alt="DEN-CF-008 - KB">
-        <p>Form Drill</p>
-      </div>
-      <div class="image-card">
-        <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/WhatsApp%20Image%202025-07-25%20at%2015.57.48_b1f35676.jpg?raw=true" alt="DEN-CF-009 - KC">
-        <p>Form Drill</p>
-      </div>
-      <div class="image-card">
-        <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/WhatsApp%20Image%202025-07-24%20at%2020.10.59_db86ae80.jpg?raw=true" alt="MT-AP5877-00">
-        <p>PCD Form Drill</p>
-      </div>
-      <div class="image-card">
-        <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/WhatsApp%20Image%202025-07-25%20at%2016.04.55_c209447a.jpg?raw=true" alt="MT-AP5880-00">
-        <p>PCD Form Drill</p>
-      </div>
-      <div class="image-card">
-        <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/WhatsApp%20Image%202025-07-25%20at%2016.08.53_18662dc6.jpg?raw=true" alt="MT-AP5881-00">
-        <p>PCD Form Drill</p>
-      </div>
-      <div class="image-card">
-        <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/WhatsApp%20Image%202025-07-25%20at%2016.13.13_3487b934.jpg?raw=true" alt="MT-AP5882-00">
-        <p>PCD Form Drill</p>
-      </div>
-      <div class="image-card">
-        <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/WhatsApp%20Image%202025-07-25%20at%2016.19.01_aa954699.jpg?raw=true" alt="MT-AP5883-00">
-        <p>PCD Form Drill</p>
-      </div>
-      <div class="image-card">
-        <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/WhatsApp%20Image%202025-07-25%20at%2016.31.11_7821bbae.jpg?raw=true" alt="MT-AP5885-00">
-        <p>MT-AP5883-00</p>
-      </div>
-      <div class="image-card">
-        <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/WhatsApp%20Image%202025-07-25%20at%2016.34.44_6113b937.jpg?raw=true" alt="Ø11.5X30°XWL1.5XOL50XSH1">
-        <p>PCD Form Drill</p>
-      </div>
-      <div class="image-card">
-        <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/WhatsApp%20Image%202025-07-25%20at%2016.35.38_90d02149.jpg?raw=true" alt="Ø15.87XW0.87XOL60XSH8">
-        <p>SPL Angle Form</p>
-      </div>
-      <div class="image-card">
-        <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/WhatsApp%20Image%202025-07-25%20at%2016.36.27_168f2066.jpg?raw=true" alt="Usha Form Tool Rev">
-        <p>SPL Face Groove</p>
-      </div>
-      <div class="image-card">
-        <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/WhatsApp%20Image%202025-07-25%20at%2016.38.07_b428cf7f.jpg?raw=true" alt="UT42125 - SC COM">
-        <p>Step Drill</p>
-      </div>
-      <div class="image-card">
-        <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/WhatsApp%20Image%202025-07-25%20at%2016.40.06_9bab2811.jpg?raw=true" alt="UT42278 - SC STEP">
-        <p>Multi Step Drill</p>
-      </div>
-      <div class="image-card">
-        <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/WhatsApp%20Image%202025-07-25%20at%2016.40.27_77dfe9ce.jpg?raw=true" alt="UT42299 - SC STEP">
-        <p>SC Step Drill</p>
-      </div>
-      <div class="image-card">
-        <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/WhatsApp%20Image%202025-07-25%20at%2016.40.51_b66fb779.jpg?raw=true" alt="UT44636 - SC BOTH">
-        <p>SC Step Drill</p>
-      </div>
-      <div class="image-card">
-        <img src="https://github.com/uthejini275/RSenterprises/blob/main/images/WhatsApp%20Image%202025-07-25%20at%2016.41.20_d1038a07.jpg?raw=true" alt="UT44636 - SC BOTH">
-        <p>SPL CD</p>
+      <div class="gallery">
+        <div class="g-item" data-cat="special"><div class="ph"><img src="images/custom-spl-groove-turn.jpg" alt="SPL Groove Turn – 30×1W ID Groove Tool" loading="lazy"></div><div class="cap"><b>SPL Groove Turn</b><span>30×1W ID Groove Tool</span></div></div>
+        <div class="g-item" data-cat="form"><div class="ph"><img src="images/custom-form-drill-den-cf-008.jpg" alt="Form Drill DEN-CF-008 KB" loading="lazy"></div><div class="cap"><b>Form Drill</b><span>DEN-CF-008 – KB</span></div></div>
+        <div class="g-item" data-cat="form"><div class="ph"><img src="images/custom-form-drill-den-cf-009.jpg" alt="Form Drill DEN-CF-009 KC" loading="lazy"></div><div class="cap"><b>Form Drill</b><span>DEN-CF-009 – KC</span></div></div>
+        <div class="g-item" data-cat="pcd"><div class="ph"><img src="images/custom-pcd-mt-ap5877.jpg" alt="PCD Form Drill MT-AP5877-00" loading="lazy"></div><div class="cap"><b>PCD Form Drill</b><span>MT-AP5877-00</span></div></div>
+        <div class="g-item" data-cat="pcd"><div class="ph"><img src="images/custom-pcd-mt-ap5880.jpg" alt="PCD Form Drill MT-AP5880-00" loading="lazy"></div><div class="cap"><b>PCD Form Drill</b><span>MT-AP5880-00</span></div></div>
+        <div class="g-item" data-cat="pcd"><div class="ph"><img src="images/custom-pcd-mt-ap5881.jpg" alt="PCD Form Drill MT-AP5881-00" loading="lazy"></div><div class="cap"><b>PCD Form Drill</b><span>MT-AP5881-00</span></div></div>
+        <div class="g-item" data-cat="pcd"><div class="ph"><img src="images/custom-pcd-mt-ap5882.jpg" alt="PCD Form Drill MT-AP5882-00" loading="lazy"></div><div class="cap"><b>PCD Form Drill</b><span>MT-AP5882-00</span></div></div>
+        <div class="g-item" data-cat="pcd"><div class="ph"><img src="images/custom-pcd-mt-ap5883.jpg" alt="PCD Form Drill MT-AP5883-00" loading="lazy"></div><div class="cap"><b>PCD Form Drill</b><span>MT-AP5883-00</span></div></div>
+        <div class="g-item" data-cat="pcd"><div class="ph"><img src="images/custom-pcd-mt-ap5885.jpg" alt="PCD Form Drill MT-AP5885-00" loading="lazy"></div><div class="cap"><b>PCD Form Drill</b><span>MT-AP5885-00</span></div></div>
+        <div class="g-item" data-cat="pcd"><div class="ph"><img src="images/custom-pcd-11-5x30.jpg" alt="PCD Form Drill Ø11.5 × 30°" loading="lazy"></div><div class="cap"><b>PCD Form Drill</b><span>Ø11.5 × 30° × WL1.5 × OL50</span></div></div>
+        <div class="g-item" data-cat="special"><div class="ph"><img src="images/custom-spl-angle-form.jpg" alt="SPL Angle Form tool" loading="lazy"></div><div class="cap"><b>SPL Angle Form</b><span>Ø15.87 × W0.87 × OL60 × SH8</span></div></div>
+        <div class="g-item" data-cat="special"><div class="ph"><img src="images/custom-spl-face-groove.jpg" alt="SPL Face Groove tool" loading="lazy"></div><div class="cap"><b>SPL Face Groove</b><span>Usha Form Tool Rev</span></div></div>
+        <div class="g-item" data-cat="step"><div class="ph"><img src="images/custom-step-drill-ut42125.jpg" alt="Step Drill UT42125" loading="lazy"></div><div class="cap"><b>Step Drill</b><span>UT42125 – SC COM</span></div></div>
+        <div class="g-item" data-cat="step"><div class="ph"><img src="images/custom-step-drill-ut42278.jpg" alt="Multi Step Drill UT42278" loading="lazy"></div><div class="cap"><b>Multi Step Drill</b><span>UT42278 – SC STEP</span></div></div>
+        <div class="g-item" data-cat="step"><div class="ph"><img src="images/custom-step-drill-ut42299.jpg" alt="SC Step Drill UT42299" loading="lazy"></div><div class="cap"><b>SC Step Drill</b><span>UT42299 – SC STEP</span></div></div>
+        <div class="g-item" data-cat="step"><div class="ph"><img src="images/custom-step-drill-ut44636.jpg" alt="SC Step Drill UT44636" loading="lazy"></div><div class="cap"><b>SC Step Drill</b><span>UT44636 – SC BOTH</span></div></div>
+        <div class="g-item" data-cat="special"><div class="ph"><img src="images/custom-spl-cd.jpg" alt="SPL CD tool" loading="lazy"></div><div class="cap"><b>SPL CD</b><span>UT44636 – SC BOTH</span></div></div>
       </div>
     </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-band reveal">
+        <div>
+          <h2>Need a special tool?</h2>
+          <p>Share your component drawing and we'll source the right special tool for it.</p>
+        </div>
+        <div class="cta-actions"><a class="btn btn-white" href="contact.html#enquiry">Send your drawing</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Tool photo">
+    <button aria-label="Close">×</button>
+    <figure><img src="" alt=""><figcaption></figcaption></figure>
   </div>
-
-  <footer>
-    <p>&copy; 2025 RS Enterprises. All Rights Reserved.</p>
-    <p>Contact: inforsebuisness@gmail.com | Tel: 040-48544579</p>
-  </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("nav-menu").classList.toggle("show");
-    }
-  </script>
+</main>
 
 </body>
 </html>

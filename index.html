@@ -1,264 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RS Enterprises</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-    }
-    body {
-      background-color: #f4f4f4;
-    }
-    header {
-      background: #b51a00;
-      color: white;
-      padding: 15px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-      z-index: 1001; /* ensure header stays above */
-    }
-    .logo {
-      font-size: 24px;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-    }
-    .logo img {
-      height: 60px;
-      margin-right: 10px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-    }
-    nav ul li {
-      margin: 0 15px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-size: 16px;
-    }
-
-    .menu-icon {
-      display: none;
-      font-size: 28px;
-      cursor: pointer;
-      z-index: 1002; /* ensure icon is clickable above nav */
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-        flex-direction: column;
-        background: #b51a00;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        z-index: 1000;
-      }
-      nav ul.show {
-        display: flex;
-      }
-      nav ul li {
-        padding: 10px 0;
-      }
-      .menu-icon {
-        display: block;
-      }
-    }
-
-    .slider-container {
-      position: relative;
-      width: 100%;
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      background-color: #fff;
-      z-index: 1; /* ensures slider stays below nav */
-    }
-
-    .slider {
-      display: flex;
-      width: 400%;
-      transition: transform 0.8s ease-in-out;
-    }
-
-    .slide {
-      flex: 0 0 100%;
-      text-align: center;
-    }
-
-    .slide img {
-      width: 100%;
-      height: auto;
-      max-height: 400px;
-      object-fit: contain;
-    }
-
-    .prev, .next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 15px;
-      font-size: 24px;
-      cursor: pointer;
-      z-index: 1000;
-    }
-
-    .prev { left: 10px; }
-    .next { right: 10px; }
-
-    .prev:hover, .next:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .dots {
-      text-align: center;
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .dot {
-      height: 10px;
-      width: 10px;
-      margin: 0 5px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      cursor: pointer;
-    }
-
-    .active { background-color: white; }
-
-    .welcome-section {
-      text-align: center;
-      padding: 30px;
-      color: #2C0977;
-    }
-
-    .welcome-section h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
-
-    .welcome-section p {
-      font-size: 16px;
-      color: #333;
-    }
-
-    @media (max-width: 768px) {
-      .welcome-section {
-        padding: 20px;
-      }
-      .welcome-section h2 {
-        font-size: 24px;
-      }
-      .welcome-section p {
-        font-size: 14px;
-      }
-    }
-
-    footer {
-      background: #2C0977;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 50px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RS Enterprises | Cutting Tools, Grinding & Custom Tooling – Hyderabad</title>
+  <meta name="description" content="RS Enterprises, Jeedimetla, Hyderabad – authorised partner for Tungaloy, Blaser Swisslube, Hittco, CUMI, Wendt and Sigma Toolings. Customised cutting tools, grinding, deburring and cycle-time optimisation.">
+  <meta name="theme-color" content="#f26a21">
+  <meta property="og:title" content="RS Enterprises – Precision Tooling Solutions">
+  <meta property="og:description" content="Customised tooling, cutting tools, grinding and liquid tool solutions from Hyderabad.">
+  <meta property="og:image" content="https://rsebuisness.in/images/banner-hittco.jpg">
+  <link rel="icon" href="images/rse-logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
 </head>
-<body>
+<body data-page="home">
 
-  <header>
-    <div class="logo">
-      <img src="images/RSE LOGO NEW .jpg" alt="RS Enterprises" />
-      RS ENTERPRISES
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">Precision tooling partner · Hyderabad</span>
+        <h1>Tooling that keeps your <span class="text-grad">production rising.</span></h1>
+        <p class="lead">RS Enterprises supplies the right cutting tools, customised special tooling and liquid tool solutions — sourced from world-class partners in Japan, Germany, Israel, USA, Switzerland and India.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact.html#enquiry">Request a Quote
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="products.html">Explore Products</a>
+        </div>
+        <div class="hero-badges">
+          <div><strong class="text-grad">Authorised</strong>Brand partner</div>
+          <div><strong class="text-grad">Global</strong>Countries support</div>
+          <div><strong class="text-grad">On-site</strong>Application support</div>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="hero-sun"></div>
+        <div class="hero-photo"><img src="images/stock-hero-drill.jpg" alt="Coated drill cutting metal with sparks" width="1400" height="1120"></div>
+        <div class="hero-card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <div><b>Cycle-time optimisation</b><span>Tooling proposals matched to your component.</span></div>
+        </div>
+      </div>
     </div>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <nav>
-      <ul id="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="slider-container">
-    <div class="slider">
-      <div class="slide"><img src="images/HITCHO.jpg" alt="Hitco"></div>
-      <div class="slide"><img src="https://github.com/uthejini275/RSenterprises/blob/main/images/bls_resized.jpg?raw=true" alt="Blaser"></div>
-      <div class="slide"><img src="images/TUNG_resized.jpg" alt="Tungaloy"></div>
-      <div class="slide"><img src="https://github.com/uthejini275/RSenterprises/blob/main/images/WENdT_resized.jpg?raw=true" alt="Wendt"></div>
-    </div>
-    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="next" onclick="moveSlide(1)">&#10095;</button>
-    <div class="dots">
-      <span class="dot" onclick="setSlide(0)"></span>
-      <span class="dot" onclick="setSlide(1)"></span>
-      <span class="dot" onclick="setSlide(2)"></span>
-      <span class="dot" onclick="setSlide(3)"></span>
-    </div>
-  </div>
-
-  <section class="welcome-section">
-    <h2>Welcome to RS Enterprises</h2>
-    <p>RS Enterprises is a leading solution provider in the field of customised tooling for various applications like turning, rotating tools, and liquid tool solutions. Presently, RS Enterprises has partnerships with leading cutting tool manufacturing companies from Japan, Germany, Israel, USA, Switzerland, and India. In our quest to find the optimum solution for our customers, we continually seek out technologically advanced products to meet our customer needs.</p>
   </section>
 
-  <footer>
-    <p>&copy; 2025 RS Enterprises. All Rights Reserved.</p>
-    <p>Contact: inforsebuisness@gmail.com | Tel: 040-48544579</p>
-  </footer>
+  <!-- PARTNERS -->
+  <section class="partners">
+    <div class="container">
+      <p>Authorised channel partner for</p>
+      <div class="logo-row">
+        <a href="https://www.tungaloy.co.jp/in" target="_blank" rel="noopener"><img src="images/logo-tungaloy.jpg" alt="Tungaloy" loading="lazy"></a>
+        <a href="https://www.blaser.com" target="_blank" rel="noopener"><img src="images/logo-blaser.jpg" alt="Blaser Swisslube" loading="lazy"></a>
+        <a href="https://www.hittco.com" target="_blank" rel="noopener"><img src="images/logo-hittco.jpg" alt="Hittco" loading="lazy"></a>
+        <a href="https://www.cumi-murugappa.com/" target="_blank" rel="noopener"><img src="images/logo-cumi.jpg" alt="CUMI" loading="lazy"></a>
+        <a href="https://www.wendtindia.com" target="_blank" rel="noopener"><img src="images/logo-wendt.jpg" alt="Wendt India" loading="lazy"></a>
+        <a href="https://sigmatoolings.com/" target="_blank" rel="noopener"><img src="images/sigma-toolings-logo.png" alt="Sigma Toolings" loading="lazy"></a>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("nav-menu").classList.toggle("show");
-    }
+  <!-- BANNER SLIDER -->
+  <section class="section" style="padding-bottom:0">
+    <div class="container">
+      <div class="banner reveal">
+        <img class="on" src="images/banner-hittco.jpg" alt="High performance cutting tools">
+        <img src="images/banner-tungaloy.jpg" alt="Tungaloy indexable tooling" loading="lazy">
+        <img src="images/banner-blaser.jpg" alt="Blaser Swisslube metalworking fluids" loading="lazy">
+        <img src="images/banner-wendt.jpg" alt="Wendt precision grinding tools" loading="lazy">
+        <div class="banner-slide sigma-slide" role="img" aria-label="Sigma Toolings boring and milling tools">
+          <div class="sigma-copy">
+            <img src="images/sigma-toolings-logo.png" alt="Sigma Toolings">
+            <p>Samurai anti-vibration boring · Micro bore units · Complete tooling solutions</p>
+          </div>
+          <div class="sigma-tools">
+            <img src="images/sigma-product-3.png" alt="" loading="lazy">
+            <img src="images/sigma-product-7.png" alt="" loading="lazy">
+            <img src="images/sigma-product-9.png" alt="" loading="lazy">
+            <img src="images/sigma-product-8.png" alt="" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    let slideIndex = 0;
-    const slides = document.querySelectorAll(".slide");
-    const dots = document.querySelectorAll(".dot");
-    const totalSlides = slides.length;
+  <!-- WHAT WE DO -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">What we do</span>
+        <h2>Complete solutions for the machine shop</h2>
+        <p class="lead">From the cutting edge to the coolant in the sump — one partner for every stage of your machining process.</p>
+      </div>
+      <div class="grid grid-4">
+        <div class="card reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6-9 9H5v-6z"/><path d="M12 6l6 6"/></svg></div>
+          <h3>Cutting Tools</h3>
+          <p>Indexable, carbide and HSS tools for turning, milling, drilling, threading and grooving.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+          <h3>Grinding Solutions</h3>
+          <p>Diamond &amp; CBN precision grinding wheels and abrasives for steel, carbide, ceramics and exotic materials.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7S5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2.7 12 2.7z"/></svg></div>
+          <h3>Liquid Tool Solutions</h3>
+          <p>Blaser Swisslube metalworking fluids that lift tool performance by 20–25% and keep people safe.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 16l4-10 4 6 2-3 3 7"/></svg></div>
+          <h3>Customised Tooling</h3>
+          <p>Special form drills, PCD tools and step drills sourced to suit your exact component.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    function moveSlide(step) {
-      slideIndex = (slideIndex + step + totalSlides) % totalSlides;
-      updateSlide();
-    }
+  <!-- WHY US -->
+  <section class="section tint">
+    <div class="container split">
+      <div class="split-img reveal">
+        <img src="images/stock-cnc-coolant.jpg" alt="CNC milling with coolant on a machining centre" loading="lazy">
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Why RS Enterprises</span>
+        <h2>Engineering support, not just supply</h2>
+        <p class="lead">We study your component, machine and process — then propose the tooling that gives the best cost per component.</p>
+        <ul class="check-list">
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Tailored tooling proposals</b>For new projects and existing lines.</div></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Cycle-time optimisation</b>Reduce cost per component with proven trials.</div></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Timely, local service</b>Based in Jeedimetla — close to your shop floor.</div></li>
+        </ul>
+        <a class="btn btn-primary" href="services.html">Our Services</a>
+      </div>
+    </div>
+  </section>
 
-    function setSlide(index) {
-      slideIndex = index;
-      updateSlide();
-    }
+  <!-- CUSTOM SHOWCASE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">RS Customised</span>
+        <h2>Special tools, sourced for your part</h2>
+        <p class="lead">Share your drawing — we source form drills, PCD tools and step drills made to your requirement by our manufacturing partners.</p>
+      </div>
+      <div class="gallery">
+        <a class="g-item reveal" href="rscustomised.html"><div class="ph photo"><img src="images/stock-form-drills.jpg" alt="Form &amp; PCD drills" loading="lazy"></div><div class="cap"><b>Form &amp; PCD drills</b><span>Complex profiles in a single pass</span></div></a>
+        <a class="g-item reveal" href="rscustomised.html"><div class="ph photo"><img src="images/stock-turning.jpg" alt="Turning &amp; grooving" loading="lazy"></div><div class="cap"><b>Turning &amp; grooving</b><span>Special inserts and holders</span></div></a>
+        <a class="g-item reveal" href="rscustomised.html"><div class="ph photo"><img src="images/stock-milling.jpg" alt="Milling cutters" loading="lazy"></div><div class="cap"><b>Milling cutters</b><span>Face, shoulder and form milling</span></div></a>
+        <a class="g-item reveal" href="rscustomised.html"><div class="ph photo"><img src="images/stock-drawing.jpg" alt="Send your drawing" loading="lazy"></div><div class="cap"><b>Send your drawing</b><span>We source the right tool for it</span></div></a>
+      </div>
+      <div style="text-align:center;margin-top:40px"><a class="btn btn-ghost" href="rscustomised.html">View all custom tools</a></div>
+    </div>
+  </section>
 
-    function updateSlide() {
-      document.querySelector(".slider").style.transform = `translateX(${-slideIndex * 100}%)`;
-      dots.forEach(dot => dot.classList.remove("active"));
-      dots[slideIndex].classList.add("active");
-    }
+  <!-- CTA -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-band reveal">
+        <div>
+          <h2>Have a component that needs a better tool?</h2>
+          <p>Send us your drawing — we'll propose the right tooling and help you cut cycle time.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-white" href="contact.html#enquiry">Send Enquiry</a>
+          <a class="btn btn-outline-white" href="tel:+919963333802">Call +91 99633 33802</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-    setInterval(() => moveSlide(1), 7000);
-  </script>
 </body>
 </html>

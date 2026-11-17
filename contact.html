@@ -1,210 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - RS Enterprises</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    body {
-      background-color: #f4f4f4;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      background: #b51a00;
-      color: white;
-      padding: 15px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-      z-index: 1001;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 60px;
-      margin-right: 10px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-    }
-
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-size: 16px;
-    }
-
-    .menu-icon {
-      display: none;
-      font-size: 28px;
-      cursor: pointer;
-      z-index: 1002;
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-        flex-direction: column;
-        background: #b51a00;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        z-index: 1000;
-      }
-
-      nav ul.show {
-        display: flex;
-      }
-
-      nav ul li {
-        padding: 10px 0;
-      }
-
-      .menu-icon {
-        display: block;
-      }
-    }
-
-    .container {
-      flex: 1;
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      color: #2C0977;
-      margin-bottom: 20px;
-    }
-
-    .contact-section {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .map-container {
-      flex: 1;
-      min-width: 300px;
-      height: 300px;
-    }
-
-    .contact-details {
-      flex: 1;
-      min-width: 300px;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-      text-align: left;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    .contact-details h2 {
-      text-align: center;
-      margin-bottom: 15px;
-    }
-
-    .contact-details p {
-      margin: 5px 0;
-    }
-
-    footer {
-      background: #2C0977;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 50px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | RS Enterprises, Jeedimetla, Hyderabad</title>
+  <meta name="description" content="Contact RS Enterprises, Prashanth Enclave, Jeedimetla, Hyderabad 500067. Phone +91 99633 33802, Tel 040-48544579. Request a tooling quote.">
+  <meta name="theme-color" content="#f26a21">
+  <link rel="icon" href="images/rse-logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
 </head>
-<body>
+<body data-page="contact">
 
-  <header>
-    <div class="logo">
-      <img src="images/RSE LOGO NEW .jpg" alt="RS Enterprises">
-      RS ENTERPRISES
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="crumbs"><a href="index.html">Home</a> / Contact</div>
+      <span class="eyebrow">Contact us</span>
+      <h1>Let's talk <span class="text-grad">tooling</span></h1>
+      <p>Call, WhatsApp or send an enquiry — our team will get back to you quickly.</p>
     </div>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <nav>
-      <ul id="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  </section>
 
-  <div class="container">
-    <h1>Contact Us</h1>
-    <div class="contact-section">
-      <div class="map-container">
-        <iframe 
-          width="100%" 
-          height="100%" 
-          frameborder="0" 
-          style="border:0" 
-          allowfullscreen 
-          loading="lazy"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.7348571232665!2d78.47283357858976!3d17.507358440599496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b19bba8870b%3A0x774387fa89d92a03!2sRS%20ENTERPRISES!5e1!3m2!1sen!2sin!4v1742580473765!5m2!1sen!2sin">
-        </iframe>
+  <section class="section">
+    <div class="container contact-grid">
+      <div class="info-list reveal">
+        <a class="info" href="tel:+919963333802">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <div><small>Mobile</small><b>+91 99633 33802</b></div>
+        </a>
+        <a class="info" href="tel:+914048544579">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></span>
+          <div><small>Office</small><b>040-48544579</b></div>
+        </a>
+        <a class="info" href="mailto:inforsebuisness@gmail.com">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+          <div><small>Email</small><b>inforsebuisness@gmail.com</b></div>
+        </a>
+        <div class="info">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><small>Address</small><b>Prashanth Enclave, Jeedimetla Village, Quthbullapur, Hyderabad – 500067</b></div>
+        </div>
       </div>
 
-      <div class="contact-details">
-        <h2>Get in Touch</h2>
-        <p><strong>Phone:</strong> +91-9963333802</p>
-        <p><strong>Tel:</strong> 040-48544579</p>
-        <p><strong>Email:</strong> inforsebuisness@gmail.com</p>
-        <p><strong>Address:</strong><br>
-          Prashanth Enclave, Jeedimetla Village,<br>
-          Quthbullapur, Hyderabad - 500067
-        </p>
+      <div class="form-card reveal" id="enquiry">
+        <h2 style="font-size:1.8rem">Request a quote</h2>
+        <p style="color:var(--muted)">Tell us about your component or requirement.</p>
+        <form id="enquiry-form">
+          <div class="form-row">
+            <div class="field"><label for="f-name">Your name *</label><input id="f-name" name="name" required autocomplete="name"></div>
+            <div class="field"><label for="f-company">Company *</label><input id="f-company" name="company" required autocomplete="organization"></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="f-phone">Phone *</label><input id="f-phone" name="phone" type="tel" required autocomplete="tel"></div>
+            <div class="field"><label for="f-topic">Interested in</label>
+              <select id="f-topic" name="topic">
+                <option>Customised tooling</option>
+                <option>Tungaloy cutting tools</option>
+                <option>Blaser Swisslube coolant</option>
+                <option>Hittco carbide / HSS tools</option>
+                <option>CUMI abrasives</option>
+                <option>Wendt grinding tools</option>
+                <option>Sigma Toolings boring tools</option>
+                <option>Cycle-time optimisation</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label for="f-msg">Requirement *</label><textarea id="f-msg" name="message" required placeholder="Component, material, machine, quantity…"></textarea></div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <button class="btn btn-primary" type="submit">Send by Email</button>
+            <button class="btn btn-ghost" type="button" id="send-wa">Send on WhatsApp</button>
+          </div>
+          <p class="form-note">Opens your email app or WhatsApp with the details filled in.</p>
+        </form>
       </div>
     </div>
-  </div>
 
-  <footer>
-    <p>&copy; 2025 RS Enterprises. All Rights Reserved.</p>
-    <p>Contact: inforsebuisness@gmail.com | Tel: 040-48544579</p>
-  </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("nav-menu").classList.toggle("show");
-    }
-  </script>
+    <div class="container">
+      <div class="map reveal">
+        <iframe title="RS Enterprises location on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.7348571232665!2d78.47283357858976!3d17.507358440599496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b19bba8870b%3A0x774387fa89d92a03!2sRS%20ENTERPRISES!5e1!3m2!1sen!2sin!4v1742580473765!5m2!1sen!2sin"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
 
 </body>
 </html>
